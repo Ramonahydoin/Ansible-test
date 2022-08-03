@@ -1,0 +1,11 @@
+--- 
+- hosts: 192.168.64.2
+  gather_facts: yes
+  remote_user: ubuntu
+  vars:
+          ansible_password: kddi
+  tasks:
+          - name: Make some folder
+            file:
+                    path: "./ansible_test"
+                    state: directory
